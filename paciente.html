@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registros de pacientes</title>
-    <link rel="stylesheet" href="styli.css">
+    <link rel="stylesheet" href="stiloP.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></scriptsrc>
     <script src="Ejecuta.js"></script>
 
@@ -35,7 +35,9 @@
         <section id="agregar">
             <form action="Ejecuta.js" class="form1">
                 <fieldset>
-                    <legend>Informacion Personal</legend>
+                    <legend>
+                        <h1>Informacion Personal</h1>
+                    </legend>
                     <label for="nombre">Nombre</label>
                     <br>
                     <input type="text" name="nombre" placeholder="ingrese su nombre">
@@ -74,8 +76,10 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend>datos Sobre El Estado De Salud Y Modo De Vida</legend>
-                    <label>¿Sufre o ha sufrido de problemas de salud?</label>}
+                    <legend>
+                        <h1>datos Sobre El Estado De Salud Y Modo De Vida</h1>
+                    </legend>
+                    <label>¿Sufre o ha sufrido de problemas de salud?</label>
                     <br>
                     <label><input type="radio" name="problemasSalud" value="cardiaco">Cardíaco</label>
                     <label><input type="radio" name="problemasSalud" value="endocrino">Endocrino</label>
@@ -87,49 +91,99 @@
 
                     <label>Peso Actual (kg): <input type="number" name="pesoActual" required></label><br><br>
                     <label>Talla (cm): <input type="number" name="talla" required></label><br><br>
-                    <label>Masa Corporal: <input type="text" name="masaCorporal"></label><br>
+                    <label>Masa Corporal: <input type="text" name="masaCorporal"></label><br><br><br>
+                    <label>Fuma:</label><br>
+                    <label><input type="radio" name="fuma" value="si">Sí</label><br>
+                    <label><input type="radio" name="fuma" value="no">No</label><br>
+                    <label><input type="radio" name="fuma" value="ocasionalmente">Ocasionalmente</label><br><BR></BR>
+
+                    <label>Alcohol:</label><br>
+                    <label><input type="radio" name="alcohol" value="si">Sí</label><br>
+                    <label><input type="radio" name="alcohol" value="no">No</label><br>
+                    <label><input type="radio" name="alcohol" value="ocasionalmente">Ocasionalmente</label><br><br>
 
 
-                    <label>Silueta:</label><br>
-                    <label><input type="radio" name="silueta" value="pequeña">Pequeña</label><br <label <in type="radio
-                        name=" silueta" value="mediana">Mediana</label><br>
-                    <label><input type="radio" name="silueta" value="grande">Grande</label><br>
+                    <label>Calidad de Sueño:</label><br>
+                    <label><input type="radio" name="calidadSueno" value="buena">Buena</label><br>
+                    <label><input type="radio" name="calidadSueno" value="mala">Mala</label><br>
+                    <label><input type="radio" name="calidadSueno" value="normal">Normal</label><br><br>
 
-                    <!-- Costumbres Alimenticias -->
-                    <label>Costumbres Alimenticias: <textarea name="costumbresAlimenticias"></textarea></label>
 
-                    <!-- Modo de Vida -->
-                    <label>Fuma:</label>
-                    <label><input type="radio" name="fuma" value="si">Sí</label>
-                    <label><input type="radio" name="fuma" value="no">No</label>
-                    <label><input type="radio" name="fuma" value="ocasionalmente">Ocasionalmente</label>
-
-                    <label>Alcohol:</label>
-                    <label><input type="radio" name="alcohol" value="si">Sí</label>
-                    <label><input type="radio" name="alcohol" value="no">No</label>
-                    <label><input type="radio" name="alcohol" value="ocasionalmente">Ocasionalmente</label>
-
-                    <!-- Calidad de Sueño -->
-                    <label>Calidad de Sueño:</label>
-                    <label><input type="radio" name="calidadSueno" value="buena">Buena</label>
-                    <label><input type="radio" name="calidadSueno" value="mala">Mala</label>
-                    <label><input type="radio" name="calidadSueno" value="normal">Normal</label>
-
-                    <!-- Deportes y Modo de Vida -->
-                    <label>Deportes Practicados: <input type="text" name="deportesPracticados"></label>
-                    <label>Modo de Vida:</label>
-                    <label><input type="radio" name="modoVida" value="activa">Activa</label>
-                    <label><input type="radio" name="modoVida" value="sedentaria">Sedentaria</label>
+                    <label>Deportes Practicados: <input type="text" name="deportesPracticados"></label><br><br>
+                    <label>Modo de Vida:</label><br>
+                    <label><input type="radio" name="modoVida" value="activa">Activa</label><br>
+                    <label><input type="radio" name="modoVida" value="sedentaria">Sedentaria</label><br><br>
 
                     <input type="submit" value="Enviar">
                 </fieldset>
             </form>
         </section>
 
+        <section id="elminar">
+            <fieldset>
+                <legend>
+                    <h1>Formulario de Eliminación</h1>
+                </legend>
+                <form id="formularioEliminar"
+                    onsubmit="return confirm('¿Estás seguro de que deseas eliminar este registro?');"
+                    action="Ejecuta.js" method="post">
+                    <!-- Agrega campos de formulario para identificar el registro a eliminar -->
+                    <label for="idEliminar">Cedula De Paciente Del Registro A Eliminar:</label>
+                    <input type="text" id="idEliminar" name="idEliminar" required>
+
+                    <input type="submit" value="Eliminar">
+                </form>
+            </fieldset>
 
         </section>
-        <section id="buscar"></section>
-        <section id="editar"></section>
+
+        <section id="buscar">
+            <fieldset>
+                <legend>
+                    <h1>Formulario de Búsqueda de Pacientes</h1>
+                </legend>
+
+
+                <form action="Ejecuta.js" method="post">
+                    <!-- Campo de búsqueda por cédula -->
+                    <label for="cedula">Buscar por Cédula:</label>
+                    <input type="text" id="cedula" name="cedula" required>
+
+                    <!-- Otros campos de búsqueda si es necesario -->
+                    <!-- <label for="nombre">Buscar por Nombre:</label>
+                    <input type="text" id="nombre" name="nombre"> -->
+
+                    <input type="submit" value="Buscar">
+                </form>
+            </fieldset>
+        </section>
+        <section id="editar">
+            <fieldset>
+                <legend>
+                    <h1>Formulario de Edición de Información del Paciente</h1>
+                </legend>
+
+                <form action="/procesarEdicion.php" method="post">
+
+                    <label for="idPaciente">ID del Paciente a Editar:</label>
+                    <input type="text" id="idPaciente" name="idPaciente" required><br>
+
+
+                    <label for="nombre">Nuevo Nombre:</label>
+                    <input type="text" id="nombre" name="nombre"><br>
+
+                    <label for="fechaNacimiento">Nueva Fecha de Nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento"><br>
+
+                    <label for="numeroCedula">Nuevo Número de Cédula:</label>
+                    <input type="text" id="numeroCedula" name="numeroCedula"><br>
+
+
+
+                    <input type="submit" value="Guardar Cambios">
+                </form>
+            </fieldset>
+        </section>
     </div>
 
 
@@ -141,7 +195,7 @@
         <p>
             Clinica Estética Ana
 
-            Bienvenido a Clínica Estética Ana, tu espacio de belleza personalizado creado en [año de fundación]. Nos
+            Bienvenido a Clínica Estética Ana, tu espacio de belleza personalizado creado en 2023. Nos
             dedicamos a realzar tu belleza natural con tratamientos de última tecnología y atención personalizada.
             Contáctanos para descubrir cómo podemos ayudarte a lograr tu mejor versión
         </p>
