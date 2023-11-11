@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros de pacientes</title>
+    <link rel="stylesheet" href="styli.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></scriptsrc>
+    <script src="Ejecuta.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <h1> <img src="imagenes/letra-c.png" alt="letra c">
+            linica Estetica Ana Alcantara. </h1>
+    </header>
+
+    <h1>Historial Clinico Pacientes</h1>
+
+    <nav>
+        <ul>
+            <li><a href="#agregar">Agregar Paciente</a></li>
+            <li><a href="#eliminar">Eliminar Paciente</a></li>
+            <li><a href="#buscar">Buscar Historial De Paciente</a></li>
+            <li><a href="#editar">Editar Paciente</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="contenedor">
+
+        <section id="agregar">
+            <form action="Ejecuta.js" class="form1">
+                <fieldset>
+                    <legend>Informacion Personal</legend>
+                    <label for="nombre">Nombre</label>
+                    <br>
+                    <input type="text" name="nombre" placeholder="ingrese su nombre">
+                    <br>
+                    <label for="apellidos">Apellidos</label>
+                    <br>
+                    <input type="text" name="apellidos" placeholder="apellido">
+                    <br>
+                    <label for="direccion">Direccion</label>
+                    <br>
+                    <input type="text" name="direccion" placeholder="direccion">
+                    <br>
+                    <label for="telefono">Telefono</label>
+                    <br>
+                    <input type="tel" placeholder="telefono">
+                    <br>
+                    <label for="fecha nacimiento">Telefono</label>
+                    <br>
+                    <input type="date" id="fechaNacimiento" name="fecha de nacimiento" required
+                        placeholder="fechaNacimiento">
+                    <br>
+                    <label for="edad">Edad</label>
+                    <br>
+                    <input type="number" id="edad" name="fecha de nacimiento" required placeholder="edad">
+                    <br>
+                    <label for="Estadocivil">Estado Civil</label>
+                    <br>
+                    <input type="radio" name="casado" value="casado">Casado
+                    <br>
+                    <input type="radio" name="soltero" value="soltero">Soltero
+                    <br>
+                    <label for="dni">Cedula</label>
+                    <br>
+                    <input type="text" name="cedula" size="11" maxlength="11" placeholder="cedula">
+                    <br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>datos Sobre El Estado De Salud Y Modo De Vida</legend>
+                    <label>¿Sufre o ha sufrido de problemas de salud?</label>}
+                    <br>
+                    <label><input type="radio" name="problemasSalud" value="cardiaco">Cardíaco</label>
+                    <label><input type="radio" name="problemasSalud" value="endocrino">Endocrino</label>
+                    <label><input type="radio" name="problemasSalud" value="circulacion">Circulación</label>
+                    <label><input type="radio" name="problemasSalud" value="digestivo">Digestivo</label>
+                    <label><input type="radio" name="problemasSalud" value="tensionArterial">Tensión Arterial</label>
+                    <label>Otro: <input type="text" name="otrosProblemasSalud"></label><br><br>
+
+
+                    <label>Peso Actual (kg): <input type="number" name="pesoActual" required></label><br><br>
+                    <label>Talla (cm): <input type="number" name="talla" required></label><br><br>
+                    <label>Masa Corporal: <input type="text" name="masaCorporal"></label><br>
+
+
+                    <label>Silueta:</label><br>
+                    <label><input type="radio" name="silueta" value="pequeña">Pequeña</label><br <label <in type="radio
+                        name=" silueta" value="mediana">Mediana</label><br>
+                    <label><input type="radio" name="silueta" value="grande">Grande</label><br>
+
+                    <!-- Costumbres Alimenticias -->
+                    <label>Costumbres Alimenticias: <textarea name="costumbresAlimenticias"></textarea></label>
+
+                    <!-- Modo de Vida -->
+                    <label>Fuma:</label>
+                    <label><input type="radio" name="fuma" value="si">Sí</label>
+                    <label><input type="radio" name="fuma" value="no">No</label>
+                    <label><input type="radio" name="fuma" value="ocasionalmente">Ocasionalmente</label>
+
+                    <label>Alcohol:</label>
+                    <label><input type="radio" name="alcohol" value="si">Sí</label>
+                    <label><input type="radio" name="alcohol" value="no">No</label>
+                    <label><input type="radio" name="alcohol" value="ocasionalmente">Ocasionalmente</label>
+
+                    <!-- Calidad de Sueño -->
+                    <label>Calidad de Sueño:</label>
+                    <label><input type="radio" name="calidadSueno" value="buena">Buena</label>
+                    <label><input type="radio" name="calidadSueno" value="mala">Mala</label>
+                    <label><input type="radio" name="calidadSueno" value="normal">Normal</label>
+
+                    <!-- Deportes y Modo de Vida -->
+                    <label>Deportes Practicados: <input type="text" name="deportesPracticados"></label>
+                    <label>Modo de Vida:</label>
+                    <label><input type="radio" name="modoVida" value="activa">Activa</label>
+                    <label><input type="radio" name="modoVida" value="sedentaria">Sedentaria</label>
+
+                    <input type="submit" value="Enviar">
+                </fieldset>
+            </form>
+        </section>
+
+
+        </section>
+        <section id="buscar"></section>
+        <section id="editar"></section>
+    </div>
+
+
+
+
+
+
+    <footer class="pie_pag">
+        <p>
+            Clinica Estética Ana
+
+            Bienvenido a Clínica Estética Ana, tu espacio de belleza personalizado creado en [año de fundación]. Nos
+            dedicamos a realzar tu belleza natural con tratamientos de última tecnología y atención personalizada.
+            Contáctanos para descubrir cómo podemos ayudarte a lograr tu mejor versión
+        </p>
+    </footer>
+
+
+</body>
+
+</html>
