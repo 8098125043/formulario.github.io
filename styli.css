@@ -14,14 +14,15 @@
 }
 
 body {
-    background: #e6c6b9;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: #f5e1ce;
 
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 ul.navega {
     width: 100%;
-    background: #5F5A4D;
+    background: #7a5c3c;
+
     list-style: none;
     display: flex;
 }
@@ -38,7 +39,8 @@ ul.navega li {
 }
 
 ul.navega li a {
-    color: wheat;
+    color: #f5e1ce;
+
     text-decoration: none;
     text-align: center;
     font-size: 19px;
@@ -47,7 +49,8 @@ ul.navega li a {
 }
 
 .active {
-    background: #7B5037;
+    background: #b08e6b;
+
 }
 
 .inicio {
@@ -57,16 +60,17 @@ ul.navega li a {
     background-position: center;
     padding: 68px;
     background-color: rgba(0, 0, 0, 0.5);
-    color: #dfb49c;
+    color: #e8c39e;
 
 }
 
 .inicio p {
+    color: #5F5A4D;
 
-    color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 25px;
-    background-color: #e6c6b9;
+    background-color: #f5e1ce;
+
     text-align: center;
 }
 
@@ -75,10 +79,11 @@ footer {
     font-size: small;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
-    font: optional;
+    color: #ffffff;
 
 }
 
-.navega :hover {
-    background-color: #7B5037;
+ul.navega:hover {
+    background-color: #b08e6b;
+
 }
