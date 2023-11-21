@@ -13,13 +13,3 @@ $(document).ready(function () {
 });
 
 
-
-function capturarCedula() {
-    let cedulaBuscar = document.getElementById("cedula").value;
-    let cedulaEditar = document.getElementById("numeroCedula");
-    let cedulaeliminar = document.getElementById("idPaciente");
-    if (cedulaEditar) {
-        cedulaEditar.value = cedulaBuscar;
-        cedulaeliminar.value = cedulaBuscar;
-    }
-}

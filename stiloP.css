@@ -40,15 +40,12 @@ nav ul li a {
     text-decoration: none;
     color: rgb(122, 59, 59);
     font-weight: lighter;
-
-    /**/
 }
 
 .contenedor {
     width: 50%;
     margin: 0 auto;
 }
-
 
 form {
     max-width: 700px;
@@ -57,7 +54,6 @@ form {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
 }
 
 label {
@@ -80,8 +76,6 @@ input[type="radio"] {
 
 .active {
     background: black;
-
-
 }
 
 input[type="submit"] {
@@ -97,13 +91,11 @@ input[type="submit"] {
 form input,
 form textarea {
     margin-bottom: 10px;
-
 }
 
 input[type="submit"]:hover {
     background-color: #b08e6b;
 }
-
 
 footer {
     background-color: #7a5c3c;
@@ -111,4 +103,35 @@ footer {
     padding: 15px;
     text-align: center;
     font-size: small;
+}
+
+
+#tablaResultados {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#tablaResultados th,
+#tablaResultados td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+
+#tablaResultados th {
+    background-color: #7a5c3c;
+    color: white;
+}
+
+
+#tablaResultados tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+#tablaResultados tbody tr:hover {
+    background-color: #d4e3f1;
+    cursor: pointer;
 }
